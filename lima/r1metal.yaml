@@ -1,0 +1,39 @@
+# The Linux VM that builds r1metal on macOS, made by scripts/setupcodebase.sh: Debian on the Mac's own CPU.
+minimumLimaVersion: 2.0.0
+
+base:
+- template:_images/debian-13
+
+vmType: vz
+
+# The workspace, which the VM sees where the Mac has it.
+param:
+  Workspace: ""
+
+mounts:
+- location: "{{.Param.Workspace}}"
+  writable: true
+
+containerd:
+  system: false
+  user: false
+
+# The kernel's trees and target/ lie on the VM's own disk, at their places in the workspace: the kernel's source holds names that differ only in case, which macOS's file system takes for one.
+# The host tools are the ones setupcodebase.sh asks for on Linux, installed once.
+provision:
+- mode: system
+  script: |
+    #!/bin/bash
+    set -eux -o pipefail
+    for dir in kernel/src kernel/vendor kernel/toolchain kernel/out target; do
+      mkdir -p "/var/lib/r1metal/$dir" "$PARAM_Workspace/$dir"
+      chown "{{.User}}" "/var/lib/r1metal/$dir"
+      mountpoint -q "$PARAM_Workspace/$dir" || mount --bind "/var/lib/r1metal/$dir" "$PARAM_Workspace/$dir"
+    done
+    if [ ! -f /var/lib/r1metal/provisioned ]; then
+      export DEBIAN_FRONTEND=noninteractive
+      apt-get update
+      apt-get install -y --no-install-recommends \
+        git curl ca-certificates tar unzip zstd make gcc libc6-dev bc bison flex perl gzip gawk diffutils libssl-dev rustup
+      touch /var/lib/r1metal/provisioned
+    fi

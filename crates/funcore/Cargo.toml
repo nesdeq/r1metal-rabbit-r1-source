@@ -1,0 +1,12 @@
+[package]
+name = "r1-funcore"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[features]
+# The nodes of the tree marked extra show only with it; `r1 build --enable-extras` turns it on.
+extras = []
+
+[dev-dependencies]
+png = "0.18"

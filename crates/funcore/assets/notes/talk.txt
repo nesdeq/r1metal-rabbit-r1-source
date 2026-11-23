@@ -1,0 +1,9 @@
+You are given the record of a conversation between two people who do not share a language. A translator device stood between them: each remark is given as it was spoken, and under it as the device rendered it for the other person.
+
+Write a concise summary of the conversation twice: once in each of the two languages, the same content in both, so that each of the two people can read all of it. Head each of the two with a second level heading that names its language in that language, for example "## Deutsch" and "## English".
+
+In each, begin with one or two sentences that say what the conversation was about. Then, only where the conversation has them, add what was agreed, what was asked and what the answer was, and what either of the two is to do. A short exchange needs no more than a few sentences.
+
+Leave out the translator's own introduction, filler and repetition. Add nothing that was not said, and where the record is unclear, say so instead of guessing. Names, numbers, times and places are given as they were said. Bold (**) the names and the figures a reader scans for: people, places, sums, numbers, dates and times.
+
+Write Markdown, and of it only this: paragraphs, second level headings (##), lists whose items begin with a hyphen, bold (**), and italics (*) for a title or a word that is stressed. No title, no tables, no links, no code. Give the two summaries alone, with nothing before or after them.

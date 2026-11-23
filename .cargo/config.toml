@@ -1,0 +1,15 @@
+[build]
+# Every build records sources by paths that name nothing of the computer it ran on.
+rustc-wrapper = "tools/rustc-remap"
+
+[target.aarch64-unknown-linux-musl]
+linker = "rust-lld"
+rustflags = ["-C", "link-self-contained=yes", "-C", "target-cpu=cortex-a53"]
+
+[env]
+CC_aarch64_unknown_linux_musl = { value = "tools/cc-aarch64-musl", relative = true }
+AR_aarch64_unknown_linux_musl = "llvm-ar"
+
+[alias]
+# `cargo r1 COMMAND` runs the flasher from anywhere in the workspace.
+r1 = "run -p r1-flasher --"

@@ -1,0 +1,19 @@
+brightness 70
+volume 40
+sounds 30
+robot off
+offset 120
+logging debug
+theme terminal
+signal_wake 15
+signal_aloud off
+auto_replies 50
+auto_gap 120
+auto_hourly 10
+alarm 1792222200
+timer 1792189200
+colours stage A
+colours dial C
+colours deck D
+colours terminal P
+colours companion O

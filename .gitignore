@@ -1,0 +1,10 @@
+/target/
+/stock/
+/out/
+/dependencies/
+/kernel/src/
+/kernel/vendor/
+/kernel/toolchain/
+/kernel/out*/
+/logs/
+.DS_Store

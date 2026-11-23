@@ -1,0 +1,24 @@
+[package]
+name = "r1-impshell"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "init"
+path = "src/main.rs"
+
+[features]
+default = ["debug-shell"]
+debug-shell = []
+extras = ["r1-funcore/extras"]
+
+[dependencies]
+r1-funcore.workspace = true
+r1-image.workspace = true
+aws-lc-rs.workspace = true
+aws-lc-sys.workspace = true
+flate2 = "1.1"
+libc.workspace = true
+rustls.workspace = true
+webpki-roots.workspace = true

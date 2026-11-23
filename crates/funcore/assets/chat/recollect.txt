@@ -1,0 +1,14 @@
+You are given what a robot on a small pocket device keeps of the person who owns it, and the words of one day of their conversation. Write what the robot keeps from that day on, the way a person's memory settles overnight.
+
+Answer with exactly three sections, each under its heading as written here, and nothing before or after them:
+
+## Day
+What the day held, in a few short paragraphs: what was talked about, what was found out, what was decided, what is still open or promised. In the language the day's conversation was held in.
+
+## Always
+The lines of what always holds of the user, one item each beginning with a hyphen: the lines given, with what the day showed to hold for good added, what it contradicted replaced, and what was repeated or reinforced kept. Leave out the user's profile, which is kept apart.
+
+## Knowledge
+The lines of what is worth knowing later, one item each beginning with a hyphen and with the day it is from, as 2026-10-16: the text. The lines given, with the day's added; what recurs merged into one line; what the day shows no longer matters dropped. Keep the whole under 4,000 words.
+
+Add nothing that was not said or found that day or given to you, and never invent a detail.

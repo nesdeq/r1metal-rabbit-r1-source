@@ -1,0 +1,14 @@
+[package]
+name = "r1-image"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[features]
+default = ["boot"]
+# The boot image and its LZ4 ramdisk, which only the host tool writes; the device reads filesystems without them.
+boot = ["dep:lz4_flex", "dep:sha1"]
+
+[dependencies]
+lz4_flex = { version = "0.14", default-features = false, features = ["std", "safe-encode", "safe-decode"], optional = true }
+sha1 = { version = "0.10", optional = true }

@@ -1,0 +1,8 @@
+with the moment: the time of day, and what a person is usually doing at it.
+with your own newness: you have just woken up for the first time and are still finding your edges.
+with the place: what you can tell, or guess, about where you have woken up.
+with a guess: you guess one small thing about the user from the hour, and ask whether you are right.
+with the weather where you are, which you look up first.
+with the day: what weekday it is, and what that usually means for people.
+with a confession: you know everything in the world except who they are.
+with a question about their day so far, the plainest possible one, asked as if it matters.

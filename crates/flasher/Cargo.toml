@@ -1,0 +1,25 @@
+[package]
+name = "r1-flasher"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "r1"
+path = "src/main.rs"
+
+[dependencies]
+r1-funcore.workspace = true
+r1-image = { workspace = true, features = ["boot"] }
+aws-lc-rs.workspace = true
+aws-lc-sys.workspace = true
+clap = { version = "4.6", features = ["derive", "env"] }
+futures-lite = "2.6"
+libc.workspace = true
+nusb = "0.2"
+rustls.workspace = true
+webpki-roots.workspace = true
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation-sys = "0.8"
+io-kit-sys = "0.5"

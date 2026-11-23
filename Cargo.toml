@@ -1,0 +1,28 @@
+[workspace]
+resolver = "3"
+members = ["crates/funcore", "crates/image", "crates/impshell", "crates/flasher"]
+
+[workspace.package]
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.99"
+
+[workspace.dependencies]
+r1-funcore = { path = "crates/funcore" }
+r1-image = { path = "crates/image", default-features = false }
+aws-lc-rs = { version = "1.18", default-features = false, features = ["aws-lc-sys"] }
+aws-lc-sys = { version = "0.45", default-features = false }
+libc = "0.2"
+rustls = { version = "0.23", default-features = false, features = ["aws_lc_rs", "prefer-post-quantum", "std", "tls12"] }
+webpki-roots = "1"
+
+# The tests draw the interface frame by frame: built optimized, with its checks kept, they run in a sixth of the time.
+[profile.test]
+opt-level = 1
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

@@ -1,0 +1,3 @@
+#!/bin/sh
+# The C compiler for the device: the clang `r1 build` puts first on the search path, LLVM's release the kernel is built with, told the device's target, its processor, where build has put the headers of musl and of our kernel, and to record this computer's paths as none.
+exec clang --target=aarch64-linux-musl --sysroot="$(dirname "$0")/../kernel/toolchain/sysroot" -mcpu=cortex-a53 -ffile-prefix-map="$HOME"=~ "$@"

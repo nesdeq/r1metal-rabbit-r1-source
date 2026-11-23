@@ -1,0 +1,6 @@
+#!/bin/sh
+# The compiler cargo runs for the workspace (.cargo/config.toml): what it is handed, told to record this computer's paths as none. Rust names the source file of every panic in what it builds: a crate's under CARGO_HOME, the standard library's where rustup keeps its source.
+sysroot=$("$1" --print sysroot) || exit
+# macOS drops the loader's search path on the way through sh; the toolchain's tools find LLVM's library by it, as rustup sets it.
+export DYLD_FALLBACK_LIBRARY_PATH="$sysroot/lib"
+exec "$@" --remap-path-prefix="$HOME=~" --remap-path-prefix="${CARGO_HOME:-$HOME/.cargo}=/cargo" --remap-path-prefix="$sysroot/lib/rustlib/src/rust=/rustc"

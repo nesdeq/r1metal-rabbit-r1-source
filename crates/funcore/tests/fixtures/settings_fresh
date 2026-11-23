@@ -1,0 +1,17 @@
+brightness 40
+volume 70
+sounds 40
+robot on
+offset 0
+logging on
+theme dial
+signal_wake 60
+signal_aloud on
+auto_replies 20
+auto_gap 30
+auto_hourly 30
+colours stage C
+colours dial C
+colours deck C
+colours terminal C
+colours companion C
