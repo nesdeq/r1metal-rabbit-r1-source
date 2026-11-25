@@ -132,4 +132,4 @@ The first six commands are the gates every change must pass; `scripts/gates.sh` 
 
 ## License
 
-r1metal may be distributed under the terms of the GNU General Public License, version 2 and no later one (`GPL-2.0-only`), in [LICENSE](LICENSE). It comes with no warranty. Third-party material keeps its own license ([Credits](docs/credits.md)).
+r1metal may be distributed under the terms of the GNU General Public License, version 2 or any later version (`GPL-2.0-or-later`); version 2 is in [LICENSE](LICENSE). It comes with no warranty. The patches in `kernel/` are under the licenses of the kernel they change ([Kernel](docs/hardware/kernel.md)). Third-party material keeps its own license ([Credits](docs/credits.md)).

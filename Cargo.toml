@@ -6,7 +6,7 @@ members = ["crates/funcore", "crates/image", "crates/impshell", "crates/flasher"
 version = "0.2.0"
 edition = "2024"
 rust-version = "1.99"
-license = "GPL-2.0-only"
+license = "GPL-2.0-or-later"
 
 [workspace.dependencies]
 r1-funcore = { path = "crates/funcore" }
