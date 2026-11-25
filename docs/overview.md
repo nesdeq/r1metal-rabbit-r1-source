@@ -149,6 +149,7 @@ One file per format: `bootimg.rs`, `cpio.rs`, `lz4_legacy.rs` and `vbmeta.rs` wr
 
 | Path | Contents |
 |---|---|
+| `LICENSE` | the GNU General Public License, version 2, whose terms r1metal is distributed under ([r1metal](../README.md#license)) |
 | `MANUAL.md`, `MANUAL.pdf` | the owner's manual: how to use the device, and the PDF `examples/manual.rs` writes of it |
 | `kernel/` | our patches and configuration (tracked); what the build downloads and produces (untracked) ([Kernel](hardware/kernel.md)) |
 | `tools/cc-aarch64-musl` | the firmware's C compiler: LLVM's clang for the device's target and CPU, with musl's and our kernel's headers |

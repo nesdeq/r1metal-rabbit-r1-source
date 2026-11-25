@@ -129,3 +129,7 @@ scripts/fetchglyphs.sh                                            # take what Sp
 ```
 
 The first six commands are the gates every change must pass; `scripts/gates.sh` runs all six in turn, a clippy warning failing its gate, and exits non-zero if any gate failed. `r1-impshell` builds only on Linux, so on macOS each runs in the VM from the workspace's root, as in `limactl shell --workdir "$PWD" r1metal cargo test --workspace`; `scripts/gates.sh` runs there by itself.
+
+## License
+
+r1metal may be distributed under the terms of the GNU General Public License, version 2 and no later one (`GPL-2.0-only`), in [LICENSE](LICENSE). It comes with no warranty. Third-party material keeps its own license ([Credits](docs/credits.md)).
